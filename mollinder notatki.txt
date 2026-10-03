@@ -1,0 +1,806 @@
+//gameplay loop
+Oprzec gameplay loop na lewelowaniu postaci
+
+
+//to do!
+
+
+Rutyna Mollindera
+Większość czasu Mollinder siedzi w gniezdzie ale ma hunger, thirst
+jesli thirst jest ponizej tam 20 to Mollinder wyrusza z gniazda w poszukiwaniu najblizszej wody 
+(chodzi w randomowe miejsca i moze strzela raycast albo trigger i jak bedzie w wodzie to wtedy pije i wraca do gniazda)
+jesli hunger jest ponizej 20 to Mollinder wyrusza z gniazda i idzie szlakiem patrolowym (patroluje okolice)
+i po jakims czasie wraca do gniazda
+(jak dodam zwierzęta to Mollinder w czasie patrolu bedzie szukał zwierząt i jak je złapie to zanosi do gniazda i zjada tam)
+
+molinder co 3 godziny in game idzie na patrol (jesli thirst ma nisko to idzie szukac wody) (jak hunger to szuka jedzenia!)
+potem wraca do gniazda czuwa godzine i potemm zasypia i trwa to 3 h i tak wkolko!
+
+//
+Skupić się na wodzie zeby nie byla real time ale zeby byla mega interaktywna bo to zrobic moge
+(distortion, depth color i te rozne zrobic zeby shader wody byl piekny) i dodac vertex displacement zeby dodac glebi wody
+i dodac male fale z tym zeby bylo ze woda jest zywa i sie rusza
+w dodatku zrobic dynamic ripples ktore deformuja mesh wody jak cos wpadnie i tworza sie ripplesy
+i zrobic shader ze caly czas sie robia ripplesy bo kapie woda z sufitu
+
+zrobic tez jeszcze nw jak musze pomyslec ale takie cos jak system wechu mollindera np nw czy finalnie bedzie ale ze gracz jakos
+zostawia zapach i mollinder wącha i idzie do miejsca w ktorym wywachal wlasnie zapach gracza
+
+ale i tez system drgań jakie wywoluje player np jesli robic cos co powoduje dragnia to mollinder idzie do ciebie a jak
+stoisz w bezruchu kompletnym to mollinder cie nie widzi i wtedy weszy
+
+moze dodac cos takiego  ze mozesz sie wysmarowac blotem zeby zniwelowac zapach!
+
+w skrocie mollinder glownie bazuje na drganiach ale jesli nie wywolujesz drgan to zaczyna uzywac węchu aby cie wytropic!
+
+no i zrobie w ten sposob ( o ile zrobie, ale more like to niz real time fluid) to osiagne calkiem 2023 spoko na dzisiejsze 
+standardy system wody!
+
+
+//
+
+zrobic ze stalagmit sie rozwala na kamienie tylko jesli bd lezec zniszczony i jesli go rzucisz kamieniem
+jak uderzyles mollidera kiedy kolwiek to juz zawsze bedzie agresywny\
+
+naprawic skipowanie jumpscare!
+
+dzwiek i effekt (moze animacja) jedzenia korzenia przez mollindera
+
+jesli mollindera udezyles to juz nie mozesz go oswobodzic rootsem
+
+//
+
+dodac dzwiek bzyczenia much
+
+zrobic lepsza (czarna) texture much
+
+//
+
+jak rzucisz w leb mollinderowi to sie stanuje na chwile i stoi przez chwile w miejscu
+
+//
+
+jak niesiesz treasure to nie mozesz skakac (moze jestes spowolniony) 
+
+//
+progresywna walka z mollinderem
+
+rozne stage walki
+
+napewno ma byc
+
+Berserk:
+Jesli mollinder ma ponizej 100 hp wchodzi w tryb berserka
+symbolizuje to wscieklym krzykiem
+jest szybszy i odblokowywuje nowe zdolnosci (jeszcze nw jakie)
+
+//
+
+Jak biegniesz i wdepniesz w grzybya to on sie rozwala
+zeby uniknac blokowania
+
+//
+
+krzywy sufit (wziac od scian skryptu)
+
+//
+
+ulepszyc logo prostymi ksztaltami i zmienic ikonke gry
+
+//
+
+distorcja wody na scianach zeby sie tak ruszala tak wiesz na boki jak to woda
+
+//
+
+mozesz polozyc treasure jesli timescale = 1;
+
+jak masz isholdingtreasure == true to wtedy nie mozesz biegac (i moze skakac)
+
+//
+randomowe wielkosci kamieni 
+
+//---------------------------
+particlesy pylu lecacego z sufitu
+
+//
+krew ma kolizje
+
+jak masz skarb i biegniesz to ci on wypada z rak!
+
+//
+lepszy cave entrance model moze jakas animacja wyjscia
+//
+wegiel na scianach caveja
+//dzwiek wygrania !@!!
+
+//
+zrobic cos ze jak chodzisz w kolko male to i tak sa kroki ale nw jak
+//
+nagrasc kroki woda
+
+graj animacje chodzenia biegu tylko jak predkosc gracza jest wieksza niz nw np 1
+te kamienie ze znikaja w danym dystansie jak jestes dal;eko to znikaja unacitve wiem ocb
+
+
+
+///
+
+JUtro sprobowac
+
+jak chodzisz lub biegasz to ci spada glod i pragnienie jak nie robisz tego to ci nie spada albo spada
+duzo mniej
+
+fajny animowany efekt glodu z tamtego poradnika!!!
+
+!!!PRZEBUDOWAC MOVEMENTSYSTEM!!!
+
+//
+fajne ai {: https://youtu.be/-luoHNdeAu0
+
+jak masz malo staminy to nie mozesz skakac!
+
+//czasami z sufitu leca kamienie najpierw leci kurz particle i potem sie respi kamien fajne pomsyl
+
+//
+stunowanie mollindera jak rzucisz mu w nogi kamieniem to staje na chwile i jest animacja ze kleczy
+jak fingers w sonsie wsm
+
+//
+mozesz w jakims spokosbem cwiczyc i to polega na tym ze robisz cos jeszcze nw co i to ci dodaje
+jedna dziesiata do throwing force ale jest jakis limit zeby nie strzelac z recznej katapulty
+
+//
+mozesz rozbijac kamienie na male kamyczki ktorych mozesz trzymac np 20 naraz
+i nimi rzucac normalnie
+
+dziala to tak ze jak klikniesz na nie E to maly kamyczek ++
+kamienie te zadaja malo hp
+1/3 tego co zwykle
+
+//
+jak sie zblizysz do mollindera na te 10 m to nie atakuje odrazu tylko
+IDZIE powoli z nowa animacja slowwalk i jak jest 5 m np od gracza to sie zatrzymuje i patrzy
+
+mollinder ma stamine 
+
+jak mollinder ma stamine to biegnie za toba 
+jak nie ma to sie wycofuje (wraca do gniazda do skarbu)
+
+jesli dystans w ktorym znajduje sie skarb od mollindera jest wiekszy niz jakas liczba to wtedy
+mollinder biegnie do skarbu
+
+
+
+//
+kolizje do terenu
+https://youtu.be/r9Kh9IFjTZE --- francuz {:
+
+//stunowanie
+
+sprawdzac czy uderzenie ma ta hit.collider.comparetag cos tkaiego
+
+//Interaction system fajna sprawa
+https://youtu.be/K06lVKiY-sY
+
+
+
+// CORE MEHANIKA -_-!
+na poczatku gry mollinder jest zragdolowany i spi
+
+mozesz rozegrac gre na 2 sposoby
+
+-po cichu
+skradasz sie uwazajac na to aby nie obudzic mollindera
+ma on rozne fazy snu, ktore mozna rozpoznac po dzwiekach jakie wydaje
+jesli ma slaby sen obudzi sie nawet jesli bedziesz sie skradac
+jesli ma silny sen mozesz zabrac skarb i uciec nie spostrzezonym
+
+//
+no i glosno to wiadomo rozkretol nie>
+
+//
+NAPRAWIC WSZYSTKO PO WIELKIEJ KATASTROFIE TAK ZEBY MOLLINDER ZNOWU DZIALAL!!!!!!!
+
+//
+MOZESZ ZEBRAC TRUJACE GRZYBY I ZMIESZAC JE Z KORZENIAMI I POTEM PODAC TO MOLLINDEROWI I ON
+WTEDY SIE ZATRUJE I ZDECHNIE PO JAKIMS CZASIE (ALBO BEDZIE MU SPADAC HP PRZEZ JAKIS CZAS)
+
+//
+Jak gracz nadepnie na kosc to sie wydaje dzwiek i on moze zbudzic spiacego mollindera
+
+//
+efekty ran mollindera zalezne od ilosci zadanego damage 
+4 damage to kurz
+wiecej np bron ostra to krew i decal
+
+
+//
+animacja
+picia , jedzenia , rzucania kamieien w playerAnim.Play("throw") np!
+
+
+//
+dzwiek blood splatter ze krew rozlewa sie na ziemie to moze fajnie brzmiec ale ciche takie wiesz ocb
+i nagrac dzwiek wbijania ostrej kosci w mollindera stab sound
+
+//
+dokonczyc model nowego mollindera zeby nie bylo przeswitow zadnych
+zrobic (sprobowac zrobic ik dla niego
+
+https://youtu.be/iMojuj0K63s ---> IK TUTORIAL CO TRWA 2 H ALE NAWET SPOKO 
+
+zabawic sie z wylaczonymi freze rotation na mapie proceduralnej bo czm nie hha
+
+
+//
+jak walniesz w stalagmita to leca 3d particlesy kamieni i jest dzwiek taki jakbym rozwalil kamien
+i slychac jak kawalki spadaja na ziemie weim o cb
+
+//
+jesli stalagmtyt lezy i mollinder go dotknie to sie rozwala na kamienie
+
+//
+Pogrubić nogi w modelu nowego mollindera , dac mu lopaty z przodu do kopania i sportować skrypty
+ze starego na niego
+potem pobawic sie z IK tylnych łap i spoko imo
+
+//
+weighty i animacja trzymania do poprawy plus optymalizajca kodu z weightami do animacji trzymania
+
+//
+Sprobowac zrobic real fluid simulation jako woda Wtedy by bylo super i mole in there byl by 
+next up (nastepny)
+//
+Spoko by bylo jakby jak mollinder jestli blsko gracza to skacze i leci do gory i naprzod troche
+taki dash jakby i wtedy zadaje damage
+
+//
+zobaczyc jak feeluje combat i atakowanie ogolnie w sonsie i sie mocno tym inspirowac plus poprawic
+animacje uderzenia bo jest nie smooth
+
+//respienie kamieni w fixed update sprawdizc
+
+
+set model to false jak dopioero jest reset animacji wjedzeniu wuiem ocb
+
+//dodac taka pare to sie unosi wiess takie chmury kurzu nad ziemia co sie unosza
+
+//Zrobic jeden death screen ale uniwersalny z czaszka narysowana na tym tle co teraz!!!!!!!
+i umieranie od grzyba zeby dzialalo nie??
+
+
+//
+ZROBIC BLEND TREE ANIMACJE NAD PODSTAWIE PRĘDKOSCI PORZUSZANIA SIE I JAK DA RADE TO KIERUNKU W 
+KTORYM SIE PORUSZAM I OVERHOUL ANIMACJI ZEBY WYGLADALY DECENT PRZYNAJMNIEJ
+ZAGRAC W OGRINALNE THE FOREST I POPATRZEC NA ANIMACJE TAM I JE ZBADAC
+
+//
+jak uderzasz to ci stamina spada w dol i jak masz malo staminy to nie mozesz uderzac
+
+//
+camera shake jak uderzasz zrobic
+
+//how to make blood stain in place of hit in unity 3d
+
+//
+zrobic model lizarda z animacjami dodac mu ik zrobic ze jak podejdzie do grzyba to go je np 20
+skekund i zrobic ze jak lizard jest daleko od cb to nw moze sie mesh renderer ususwa albo  set
+active false ogolnie optymalizacja nie
+
+//spizarnia mollindera jak kazdy kret mollinder ma spizarnie kolo albo w gniedzie gdzie
+leza trupy zwiezat i kosic tez
+
+
+//TAKI FAJNY IF STATEMENT MOZE SIE PRZYDAC KIEDYS albo do bleedingu
+        if (currentHealth == 0)
+        {
+            TakeDamage(100);
+            currentHealth = 1;
+        }
+
+//
+
+dodac ze sila rosnie jak uderzasz i moze jak masz wiecej sily to meele combat jest jakis
+leposzy nw
+
+
+//
+Sprobowac zrobic nowego playera w ktorym po 1 jest ragdoll do urzytku po 2 camera jest w postaci
+i w camholderze po 3 przepisac skrypty najbardziej wydajnie jak sie da i te co moge 
+zmiescicc w jednym np meele combat i pickup system
+
+
+//
+RAY CASTY NIE DZIALAJA PONIEWAZ NIE MA MESHA TEREN WIEC MUSZE DODAC TO ZE RAYCASTY PO JAKICHS 2 SEK 
+SIE WYSYLAJA DOPIERO Z PODRANIKA OD ZIOMKA ROBOCIKA 1 DEVLOG BO ON POKAZUJE JAKIEGOS
+FAJNEGO SYSTEMA GENERATORA!!1!
+
+//
+Naprawic dzwiek upadku ze tylko jak londujesz to gra a nie jak biegasz i zmienic na fajniejszy
+tez
+I nagrac kroki w tych butach trzewikach chodzenia po kamieniu inspirowane stranded deep
+
+//
+Zrobic buty graczowi zrobic nowy czystszy rig i usunac glowe zastapic ja kamera ktora bedzie
+zparentowana do modelu
+
+//
+no i ogranrnac tego nowego playera nowy model wiesz ocb
+i tez zrobic trzymanie kamienia dwoma rekami moze bo tak w kazdej grze jest czm nie! fajnie
+wyglada@!
+
+//
+nw czy to ma sens ale moze cos takiego ze jedzenie zajmuje czas rzeczywiscie i np zeby zjesc grzyba
+musisz go ugrysc 3 razy i jest bites ++ jak ugryziesz i gra animacja taka jak teraz
+i jesli bites = 3 np to zjadasz go calego Nawet fajnie to brzmi innowacyjne imo
+
+
+//Realizm Mollindera
+
+Zrobic shader z futrem realistycznym
+jiggle physics na jego brzuchu bo krety sa tluste!
+ogarnac animacje mollindera jakies
+napewno slow walk , run, idle
+mollinder patrzy na cb glowa z pomoca ik wiesz ocb
+sprobowac zrobic takie, ze jak mollinder sie obraca to segmentami ze najpierw przednia czesc
+ciala a za nia tyl ciala jak na tym asset packu co ogl kiedys i jak w arku np sarco wiem ocb
+i sprobowac rowniez zrobic kroki jak postawi noge w proceduralnej animacji moze da rade jak
+na tym filmiku z prcd walk pajaka jakiegos goscia co dalem koma bo fajne kroki byly tez wm ocb
+
+
+//
+znalesc jakis ten distortion effect i dodac na wode na scianach
+
+i zrobic nowy shader wody ale tym razem taki dowalony z riplle i splashami i wogule fajny!
+to bd duzo roboty ale no co...
+
+//
+fall damage ale jak spadniesz z zwyklej wysokosci to skrecasz kostke i poprostu jestes wolniejszy
+a jak spadniesz z serio duzej wysokosci to umierasz poprostu
+
+//
+tam gdzie trafisz mollindera kamieniem to zrobic shader ze sie futro wgniata nw czy to jest mozliwe
+ale bylo by fajne!
+
+//
+sprobowac zrobic bardziej smooth upadek! z ground checkiem cos
+
+//
+zrobic lepsze settings menu i dodac tam mouse sensitivity np i dodac do pasue menu in game
+ten canvas zeby podczas gry mozna bylo zmieniac!
+
+//zrobic ze pochodnie trzymasz w lewej rece, zrobic nowy model pochodni i tekstury
+sprawdzic jak w sonsie dziala pochodnia w kejwach i w defie tez wsm czm nie lb ta gre haha
+
+dodac te logo w rozne miejsca wm ocb!
+
+//
+nagrac dzwiek ognia i dodac go do pochodni ze ona sie pali i tez fire particles albo shader dodac
+
+//
+poprawic jakos dzwiekow zmienic na lepsze reverb i moze echo dodac!
+
+//
+move sprobowac zrobic procedural walk animation do mollindera i odnowa ik ale animacje
+proceduralne byly by spoko wsm
+
+https://youtu.be/BQGTdRhGmE4
+
+lepszy model trujacego grzyba zrobic! i popatrzec na necie jakie grzyby sa w kejwach
+
+//
+jak zaczynasz gre to sie budzisz zragdollowany w jaskini i nad toba jest dziura i pod toba lezy twoja
+pochodnia ktora mailes w rece akuat i usunac ten cave enterance!
+
+//
+dodac cold breath particle system ze para leci z ust bo w cave jest zimno!
+
+//NA JUTRO WAZNE
+!!!ZLOZYC WKONCU CALEGO MOLLINDERA DO KUPY Z PROCEDURAL WALKIEM, SLOPE ALIGNMENTEM,PATRZENIEM 
+GLOWA NA GRACZA I INNYMI STARYMI SKRYPTAMI , TAK ZEBY ROTACJE I COLLIDERY DZIALALY BEZ
+PROBLEMU I ZEBY WKONCU BYL CALY ZLOZONY!!!
+
+--> https://youtu.be/EdjAYrssxDM, orginalny tutorial! procedural walk
+
+
+//moze dodac ryby jak jakos ogarne performance i one beda se plywaly w max i min height gora dol
+i to bedzie dziaalc tak ze nie maja grawitacji i lataja w obrebie np -3 , 1 wysokosci i bd git!
+
+//zrobic ze jak tworzysz gre to mozesz wpisac seed w lobby i ta informacja z seedem potem
+jest przenoszona do skryptu z procedural generation i wtedy sie generuje swiat z tym seedem
+co zostal wpisany w lobby!
+
+//
+jesli bedzie multiplayer (oby sie udalo chjcialbym mega) i mollinder uderzy gracza to
+on sie ragdolluje i upada i drugi gracz moze go podniesc ale musi mu dac cos do jedzenia np
+albo bandaz jakis cos takiego
+
+//
+https://youtu.be/6kWNZOFcFQw --< dobra to jest duzo lepsze i tom weiland wiec git i fajne!
+
+//
+dzwieki niszczenia w metodzie ondestroy 
+to genialne!!!
+
+
+//Dodac buklak jako itemek taki co go mozesz trzymac nie w rece ale miec jakims tam eq na pasku
+czy cos. Robi sie go ze skory z upolowanej zwierzyny i mozna do niego nabrac wode 3 razy
+i potem 3 razy sie napic z niego
+
+
+//
+nauczyc sie jak sie robi dots w unity i ogolnie te entity i zrobic testowa scene i jak bd dzialac
+to zrobic zwierzeta jako entity w dots i powinny byc zoptymalizowane
+
+//poradnik na echo!
+https://youtu.be/sl0BhyBPPFI
+
+//dodac ze mollinder, wszystkie przedmioty, ai animalsy, stalagmity sa disabled jak sa daleko a jak
+sie zblizasz to sie eneableuja zeby optymalizowac jak najbardziej!
+
+
+// dodac motion matching nw czy mg bez animacji nawet xd ale no takie smooth zeby bylo zeby mollind
+er byl more alive zeby byl organiczny a nie statyczny jak teraz
+
+//podzielic mollindera na dwa segmenty tyl (tylnie lapy do polowy ciala cale cialo) i przod
+i tyl podaza za przodem i to da moze fajny efekt ale nw jak to zrobic totalnie
+
+jak uderzysz lub rzucisz rockiem to zostaje slad na ziemi decal albo na stalagmajcie a na mollinderz
+e jak rzucisz koscia ostra to krwawy slad decal tez
+
+DOWIEDZIEC SIE JAK ZROBIC WLASNY SHADER DECAL !!!
+
+//zrobic ten bluszcz nw dokonca jak albo shader jakis albo raycastami dodac cos popatrzec musze
+na necie
+
+//Zakretolic feeling i wyglad z gierki gradient gamesa! jesli chodzi o kammienie i rzucanie nimi
+ze jak trzymasz mouse 1 to nabierasz sily i jest animacja ze zamachujesz sie do rzutu i jak puscisz
+to kamien leci z taka sila z jaka go naciagnales!
+
+//
+https://youtu.be/Fu9X3OowEy0 Poradnik na luk
+sprobowac dodac luk fajny
+
+//moze zrobic tak ze para z ust leci tylko jak dyszysz i jestes zmeczony i to bedzie
+sposob na pokazanie braku staminy bez dzwieku w grze TEZ imo spoko pomysl (pomek
+
+//
+Jak rzucisz w mollindera ostra koscia to zmienia ona material na zakrwawiony
+
+//
+Mesh deformation! https://youtu.be/-dsRIyzAcqg?si=uscthLvIwXB_Fz-Z
+
+//
+tutorial ik procedural animation na dwie nogi do playera zrobie test czy pasuja procedural animacje
+https://youtu.be/FXhjhlNvvfw?si=463f_R7qZ5esRfi9 link do poradnika!
+
+//Mesh deformation co jest odziwo wydaje sie simple zobaczymy jak to pojdzie musze to stesotoweac
+https://youtu.be/5aXMMXPACpo?si=2vjGieRNoKX3gWdH poradnik!
+
+ogolnie to plan jest taki zeby dodac opcje kopania w ziemi co sprawi ze mesh sie bedzie deformowac
+ale jeszcze nw jak moze narzedzie jakies czy cos takiego
+i ma to byc dlugi proces zeby wykopac np jedna dziure musisz kopac z 1 min conajmniej wiem ocb
+i zrobic ze np mozesz robic pulapki na mollindera kopiac dziury i on tam wpadnie i nie moze wyjsc
+i go mozesz 💀💀💀 wtedy latwo!
+
+//zobaczyc co to object pooling w unity 3d!
+
+//
+https://youtu.be/UxLJ6XewTVs?si=3wJrI7OXbkrV7hVc jiggler jak szukalem toi nie bylo ...
+
+//ZROBIC PROCEDURAL WALK Z TEGO SAMEGO SKRYPTU CO MOLLINDER ALE ZMODYFIKOWAC TAK , ZEBY
+BYLO NA DWIE NOGI A NIE 4 I STESTOWAC CO LEPSZE TO CO TERAZ CZY TAMTO I JAK TAMTO TO
+ULEPSZYC ZEBY BYLO SPOKO1
+
+fajny seed 171137
+
+
+//Dodac plywanie z rigidbody!!!
+
+//Zrobic ze jak sie respisz i jak sie respi mollinder to sprawdza czy jestes w scianie i
+jak jestes w scianie to losuje ci kolejne miejsce do zrespienia sie(tak zeby sie nie respic w sciane
+poprostu i zeby gniazdo mollindera tez sie nie respilo w scianie)!!!
+
+//detect object using raycast poradnik do tego
+https://youtu.be/vqc9f7HU-Vc?si=ca84Cw4rYfffOzD2
+
+zrobic w meni zakladke z lorem po ang i tez moze dodac lektora jak se czytam to i mozna to wlaczyc albo przeczytac samemu! smieszne
+takie!
+
+//https://youtu.be/H7zAORa3Ux0?si=pp5vYX3524juFuqU dotsy pooiradnik!
+
+
+//Dodać ze mollinder moze plywac ale nw jeszcze jak albo ze nie ma grawitacji jak w wodzie albo dodac wypornosc wody 
+i wolal bym wypornosc dodac to wtedy mg uzywac na innych rzeczach wiec zobnaczymny!
+
+
+//Jak gwirzdzesz zeby kundlowi cos powiedziec to przy okazji postac pokazuje reka jakis gest np jak jest stay here to wystawia reke 
+na znak stopu albo follow to robi ruch reka ze chodz no XD wiem o co ch0odzi czaje co jhest 5 na moim igie jest 1 zdjec!
+
+//Pies ma tryb tropienia Mollindera bo w tych kejwach to latwo sie zgubic fajny pomek!
+
+//Dodać dla gracza topienie sie i plywanie i jak sie utopisz to nowa wiadomosc na death screenie!
+
+zrobic spawnowanie resoursuw tak ze loopuje sie przez kazdy verticiesa i na kazdym jest np 5 procent szans na spawna! jakos to ogarnac
+musze no!
+
+//https://youtu.be/kMr2HiU7DlE?si=C5HWfEOHCwT94GyI procedural plane generation (moze uzyc do wody ale nw)
+
+//https://youtu.be/sqWs6ScSanw?si=9raYhhAHxetDfUHg kropelki takie fajne moze zrobie tak ze dodam taki efekt na sciany cave
+zamiast mojego shadera zobaczymy
+
+
+//Ripples mega fajnie wygladaja na filmuie!
+https://youtu.be/4CNad5V9wD8?si=KG6gDulAz-0yk-z6 Okej nareszcie znalazlem fajna rzecz musze to zrobic JAK NAJSZYBCIEJ
+zobaczyc czy dziala i mega jaram sb
+
+//takie planty physics jak w project ferocious
+https://youtu.be/lfuDzTBqeiw?si=pjT2SApOnnVGAyaI fajne {:!
+
+
+//Okej jutro musze sprobowac to bo nie ma zadnych innych kamer ale jest prostrze i trch gorsze ale od czegos trzeba zaczac wiec
+to sprobowac!!!!
+
+https://youtu.be/5EyL0WpjdI8?si=6RvO4ORM-2fxPiWT <--- !!!
+
+// przerobic system kroikow tak ze strzelam ray castem z postaci do dolu i hit odczyutje jaki layer jest uderzabny
+i jesli to water to kroki woda jesli ground to kroki ground i jesli nw moze bloto to bloto flexible to jest i fajne1!! wiec
+musze toi zrobic!
+
+//Nie mozesz podniesc skarbu bo kurcze jak podniesiesz tone zlota ale musisz rozwalic skrzynie i zabrac sakiewke z zlotem!
+
+//Na przyszlosc niedluga!
+
+jak wchodzisz do gry to wyswietla ci sie ui z kazda informacja na temat gry co masz robic, mechaniki, jaki jest cel, i o co chodzi
+ogolnie
+
+dodac tez w menu pauzy ustawienia jak dzwiek np regulacja i dodac inne ustawienia tez
+tez dodac controlsy w pauzie i innej ui elemencie tak jak jest w menu zrobic zreszta nawet mg to skopiowac czm nie1
+sensitiivty tez dodac w pauzie!
+
+//Dodac konsole debugowa 
+powody " : przydaje sie w debugowaniu to po  1 i najwazneijsze a po 2 jest mega fajna do zabawy pozneijszej i dla innych graczy nawet
+jest fajan wiec imo git !!1
+
+//Jak jest death  scrren to dodac albo jakies porady jak zyc albo np jakies teksty typu haha spadles hihi cos takie fajne zonacze co
+
+zrobic jakis szkic dizajnu na ui i zrobic fajne ui jakies smooth takie
+
+//zrobic tak zeby player spadal szybciej i dodac mase odpowiednia dla wszystich obiektow w mollinder yea!
+
+//zrobic jakims cudem tak w ik zeby kolano sie zginalo a nie noga wyginala do tylu i jak to zrobie to zrobic kucanie ktore zmneijsza 
+collider zeby sie przeciskac przez niskie szczeliny w kejwie plus dodac cos takie ze jak kucam to zrobic root bone postaci w innym miejscu
+i zrobic ze miednica sie obniza i wyedy ik robi tak ze kolana sa zgiete o ile to zadzialam i wyedu to wyglada jakbym kucal
+i postac jest nizsza i wyedy zmniejszyc collider pp i bedzie git to brzmi ciezko help jakretole!!!
+
+//https://youtu.be/R6EX6dN1BOs?si=pJhsjcWbyv470OLb ripples particle jak pod deszczu ale mg dodac do kropel wody jak spadaja 
+ale dodac pp na wode albo na ground spoko opcja!
+
+//zrobic MOZE shader kropelek spadajacych i jak player wpadnie do wody to ma ten shader przez czas jakis!
+
+//Poradnik na to jak zrobic ze krople wody splywaja z soczewki kamery tkaie jak w the sons of the forest masz fajne chcialbym dodac
+kiedys moze
+https://youtu.be/jfXJYPTdyAg?si=uO2-HrlavS0QPdH4
+
+//Dalekosiężne plany na damage mollindera
+jak mollinder dostanie to jiggly jest jego brzuch albo on albo czesc ciala ktora dostanie
+decal krwii, albo odgniecienia jakiegos
+deformacja przy uderzeniu uzywajac shadera deformujacego!
+
+//Jak bede tworzyc fizyke liny wyjsciowej z kejwa chyba bede to poradnik na physics based rope
+https://youtu.be/8rI1D1YQmhM?si=OOJqUHSmt3OhK44D <-- tu
+
+//nw czy tu zapisywealem ale fajne procedural ripplesy na wodzie
+https://youtu.be/LaHvayJphdU?si=e0VLWcfC5oxpxjUD
+
+//Zrobic na nowym projekcie test mojego systemu z rzuszaniem rekami ik target
+
+//NA JUTRO!!!
+Dodac topienie sie jak jestes pod woda
+dodac underwater effekt na kamere albo cos
+pomyslec nad systemem zimna ale go zaprogramowac w podstawie
+--> jak jestes na powierzchni bez pochodni to twoja temperatura jest neutralna czyli cos takiego ze spada ale bardzo wolno
+neutralna to int 1
+jak trzymasz pochodnie to jestes warm i git 
+warm to int 2
+jak wpadniesz do wody to instant zaczynasz zamarzac
+zamarzanie to int 0
+jesli int to 0
+to wtedy dostajesz debufyy jakies! pomysle nad tym ogl
+
+//Moze sie przydac do pickup systema!
+https://youtu.be/TVJB_1d3xTE?si=DyiZKFdLxPs9AGgh
+
+//przydatne do ik w odleglosci np glowa mollindera albo cos
+https://youtu.be/Kk0xN26ICLQ?si=Nz2XVR0EsnU6cx3A
+
+//zelka stestowac1
+https://youtu.be/Kwh4TkQqqf8?si=JbX_1V4s3xru1vYZ
+
+//Zrobic normal mape do ground zanlesc fajny tiling zeby grunt i sufit byl ostry i zrobic normal mape fajna i smoothnes zeby
+bylo wilgotne i moze potestowac rozne shadary flooded groud!
+
+poradnik 1 : https://youtu.be/bwL-420wjzM?si=OMcYcH3u-AqITOXf
+poradnik 2 : https://youtu.be/R6EX6dN1BOs?si=x09FqQoq6Ed4SLv5
+
+//Jak mollinder do ciebie podejdzie to cie taranuje i ragdollujesz sie i potem bierze cie w pysk i zanosi do gniazda i wtedy death
+screen dopiero
+
+//hary szaleje!~ fajne tipy woda crazy! ogl to woda ripples refraction distortion ale nw czy uzyje bo tego real time water
+lubie bardzo!
+https://youtu.be/VtFdTwPhb-w?si=5kpUYvVU-eBljHHL
+
+//Poradnik real time water bo go zgubie i se cos zrb wtedy!
+https://youtu.be/zbBwKMRyavE?si=2ulcK-bRntiicZTz
+
+//Jak narazie  z bolem serca moge sobie odpuscic real time water sim bo zeby to dzialalo w grze w wiecej niz 30 fps to musial bym nw
+co zrobic (umiec programoac compute i gpu szalenstwa)
+Ale zrobić reasearch na temat realtime fluid i zrobic na nowym projekcie ta wode i moze nw jak nie opuszcze unity to to
+rozwinac MOZE i moze w update jakims dac do mollindera albo nw pp zrobic to!
+
+//Zrobic ten displacement co wyslalem do mundiego na mess hhihi!
+
+//jak jestes glodny to masz czarny overlay z watervolume wziac i im wiecej hunger jestes tym dawac to dalej i dalej
+az wkoncu bedzie prawie calkiem czarny ekran
+
+i tak samo z blurem jak jest thirst
+
+i Moze jak toniesz to ekran sie robi coraz ciemniejszy nw moze moze!
+
+//NA JUTRO!
+STESTOWAC DISPLACEMENT I EWENTALNIE STALAGTYTY Z WLASNIE DISPLACEMENTEM ALBO PP FAJNE KRZYWE POWIECHNIE
+I CO WAZNIEJSZE
+
+ZROBIC OVERHAUL MODELU GRACZA TAK ZEBY KOLANA Z IK WYGINALY SIE DO PRZODU A NIE DO TYLU I ZEBY RAGDOLL DZIALAL!!!
+PRZEROBIC ARMATURE CALE!
+
+//
+sanity system i jak masz male sanity to slyszysz scary ambient soundsy czesto bo jak jestes dlugo w jaskini to tak jest
+i sanity spada jak jestes w ciemnosci a jak masz swiatlo to wzrasta!
+jak masz mega male sanity to slyszysz glosy ciagle i wszystkie staty sa mega male
+
+//Najwiekszy goal w tej chwili SKONCZYC GENERACJE SWIATA I DOPIERO SIE BAWIC SKONCZYC TO 
+UZYWAJAC MARCHING CUBES ZROBIC PELNY PROCEDURALNY CAVE
+
+//Dodac system ze mozesz sb np skrecic noge albo zlamac czy cos ten teges
+i jak upadasz i sie ragdollujesz to wtedy masz np 25 procent szans (moze zalezne od wysokosci) na zlamanie sb jakiejs konczyny
+mmoze to byc lewanoga, prawanoga, lewareka, prawareka i jak jest zlamana to jest na niej decal obtarcia i krwii
+i np jestes wolniejszy jak polamiesz nogi a jak polamiesz rece np wiodaca reke to jest ona wylaczaona i tylko z jednej mozesz 
+korzystac!
+
+//Jak zniszczysz skarb to wylatuje sakiewka (win item) ale tez w skarbie jest lina ktora jest potrzebna zeby uciec z jaskini
+
+//problem w tym ze nie moge zmienic reki jak upuszcze jeden item dlatego ze canpickup jest true a nie moze byc true
+jesli nie jest true to wtedy moge dac do drugiej reki z lewej i moge wtedy upuscic normalnie!
+jak klikniesz R(drop) i trzymasz cos w lewej rece to wtedy canpickup daje sie na true a nie powinno!
+
+//Aby dokonczyc pickupsystem
+
+dodac opcje zmieniania itemow z reki do reki nawet gdy obie sa zajete tylko wtedy jesli trzymasz w nich inne od siebie przedmioty
+(zeby uniknac dlugiego przekladania przedmiotow innych z reki lewej do prawej np)
+
+dodac opcje rzucania oczywiscie caly system
+
+zrobic tak zeby przedmioty ktore sa trzymane byly pozycjonowane poprawnie a nie zeby lataly kolo reki (naprawic root transformy
+w modelach tez, moze dodac jakies empty transformy i dac je jako transformy w kodzie zamiast kosci, moze)
+
+dodac jakas animacje trzymania przedmiotow(taka jak byla wczesniej ale moze z uzyciem IK i dodac jakis sway taki zeby wygladala
+naturalnie i organicznie a nie jak robot)
+
+dodac animmacje przekladania przedmiotu z reki do reki (moze z poloczenia IK oraz baked animation, zobaczymy, musze zrb reaserach)
+
+dodac animacje podnoszenia (schylanie sie jesli current y jest tam iles a jesli nie to pp wysuwanie reki, dokladnie jak w kcd
+wszystko, oraz zrobic to z użyciem IK zeby reka lapala za obiekt rzeczywiscie, code monkey ma tutorial, baked animacja
+plus IK chyba to jest, też zrobic reasearch)
+
+dodac dzwieki przekladania i podnoszenia przedmiotów (chyba jeden uniwersalny ale zobacze jeszcze, dzwieki malo waza wsm!)
+
+//Naprawic i zoptymalizowac Kod rzucania jak i caly pickup i dodawac nowe rzeczy 
+plus zrobic system naciagania rzutu ze jak trzymasz to rosnie sila rzutu i jak osiagnie jakas max liczbe to wtedy stopuje
+
+//marching cubes jakeis cos zobcze potem jak sie bede za tyo brac
+https://youtu.be/6n-ifbqpoHQ?si=AzMALuey4j2iSksz
+
+//NAPRAWIC BUGA WIELKIEGO NW OCB ALE ZEPSULO SIE WSZYSTKO!
+
+//Taki systemm fall damage
+ze jak spadasz to sie przewracasz i zadaje ci to zaleznie od wysokosci z jakiej spadles mnoznik damage 
+i zawsze sie przewracasz (ragdoll) i nagrac dzwiek taki krzyk jak w kcd jak spadniesz
+i tez ten system otarc albo zwichniec
+
+//usunac spawnowanie mollindera w wodzie sztrzelajac kolejnego raycasta po udanym 1szym i jesli hit point jest wiekszy niz jakis
+tam y (wiekszy niz y na ktorym jest juz woda ) to wtedy respi dopiero!
+
+
+//fajny seed na zabawnym generatorze mc wielkosc 30, seed = 5458 
+
+//stalagmity robic tak ze 
+loopuje sie przez kazdy very i jesli jakas tam liczba szansy == 5 np to wtedy robie stalagmmit kodem dodaje do voxela
+przetestowac to!
+
+
+//usunac zwykle hp ogolne mollindera i dodac hp dla kazdego organu i np mollinder nie umrze jak bo bedziesz bil po malym palcu u
+stopy ale np zginie jak bedzie dostawac w glowe (kazda czesc ciala ma osobne hp i jesli jakas krytyczna, np glowa ma 0 to umiera)
+(a jesli np noga to ma debuffa albo np bleeding co mu zabiera hp smiertelne)
+dodac tez inta bloodProcentage czy cos takiego i ogolnie jak bedzie krwawienie lub bedzie leciala krew to wtedy nie zabiera hp
+tylko spada poziom krwii i jesli poziom krwii jest np 0 to wtedy umiera
+
+dodatkowe info co do tego systemu:
+rodzaje krwawienia:
+krwawienie zewnetrzne (powstaje od uderzenia bez posrednio ostrym przedmiotem w jaki kolwiek obszar na ciele)
+krwawienie wewnetrze (powstaje od silnego uderzenia tempym przedmiotem w wybrane obszary na ciele (glowa, brzuch))
+
+inne:
+zemdlenie (debuf powodujacy ze mollinder mdleje na okreslony czas (10-20 sekund), moze byc wywolany silnym uderzeniem w glowe
+z uzyciem tempego przedmiotu)
+
+//takie fajne opoznienie przelonczenia sceny cos tego te potem
+https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager-activeSceneChanged.html
+
+//jesli timescale to 0 to wtedy wylaczyc skrypt movementa calego albo jesli smierc i zroibic to this.enabled czy setactive 
+jakos tak to bylo wiem ocb
+
+//dodac detal taki na pozniej ze jak ci spadnie kamien na noge to albo upadasz albo postac mowi auu ał ou ouf jak zwal tak zwal
+
+//Ogarnac model mollindera zeby byl prosty i wprowadzic male zmiany jak np wonsy i oczy itp
+wymodelowac grzyby z tego poradnika tez i je podmienic z dobry root transformmem
+
+//do scriptable itemow dodac stat sharpness i jesli jest zero to item jest obuchowy a jesli 1 to ostry
+albo zrobic cos takiego ze jesli jest wiecej niz 0 to sharpness to multiplier obrazen itemu np jesli ostra kosc ma 5 to np
+5 * sharpness / 5 czy cos takiego
+
+//sprobowac na testa zrobic cos takie ze jak podnosisz item to on jest kawalek w powietrzu od reki i wtedy zrobic ik palca wszystkimm
+(naprawic model i rig) i wystrzelic target palcow raycastem i zachowac collider itemu podnoszonego i zrobic tak zeby tagety uderzaly
+w item i wtedy bedzie proceduralna aniamcja trzymania!
+
+//przepisac jeszcze raz caly pickup system ale juz tym razem z dzialajacymy oba recami i wszystkimi nowymi rzeczami tez!
+
+//blad z kolizja na itemmach kiedy kucasz jest spowodowany tym ze jak narazie sa 2 collidery a skrypt ignoruje tylko main collider
+a nie ten co sie wlacza jak kucasz!!!
+
+//moze sprobowac taki system zeby raycastammi sprawdzal czy jestes w malym zamknietym pomieszczeniu i jesli jestes to efekt sie robi
+taki jak  w ciasnych jaskiniach (room effect) a jesli raycasty wykaza ze jestes na otwartej przestrzeni to wtedy reverb(podkrecic,
+pommniejszyc room)
+
+//Podlaczyc scriptable objecty itemow do collision reaction zeby mozna bylo wybrac sb w scriptableOBj dzwiek, efekt itp
+
+//Po skonczonym coroutine zmienia sie scena jak jest black out zmieniajacy na inna scene!
+
+
+//Zrobic od nowa main menu
+zrobic je tak zeby byl jeden canvas jeden background image ( jak bede chcial inny na innej scenie w sensie innym przycisku
+to zmienic sprite pp) i zrobic tak ze wszystkie napisy i przyciski sa najwyzej a tla i inne sa pod i zeby jeden black screen
+dzialal na wszystkie te "sceny" i jak je zmieniasz to fade in fade out itp (przepisac tez na czysto skrypty UI main menu)
+
+//wkoncu zrobic optymalizacje ze itemy ktore sa daleko sie deaktywuja i aktywuja jak jestes blisko znow
+
+
+//jak nie masz zadnego swiatla i jestes w totalnej ciemnosci to wtedy spada ci sanity i slyszysz straszne dzwieki ( i moze dodamm
+ze w oddali widac jakies figury ludzkie, cienie) i zrobic to tak ze jesli nie ma zadnego light source w okolicy jakiejs to wtyedy
+
+//zeby znerfowac troche ciagle bieganie to zrobic ze stamina jak stamina (tak jak teraz) ale ze spada ci poziom sily w sensie
+stammina wsm a tamto to powinno byc energy wm ocb i jak masz malo tej staminy to wtedy nie mozesz biegac a regeerujesz ja odpoczywa
+jac jakos i jak amsz mmalo tej staminy to tez masz mniej energii i np nie mozesz biegac moze skakac itp pp zmeczenie 
+tak jak ja mam po wf caly dzien potemm
+
+//moze zrobic taki detal ze jak trzymasz jakis item to wtedy jak go trzymasz na wyciagnietej rece to ci sie meczy reka 
+i jesli sie zmeczy reka to wtedy opuszcza reke na idle i po jakims czasie jak odpocznie to od nowa trzyma na wyciagnioetej i tak
+w kolko i w kolko 
+Fajny detal i dodaje realizmmu
+
+//zapisac w player prefs te dane np bool co testowaelm na drugim projekcie tak zeby sie zapisywaly i przenosily
+
+//stestowac system wibracji taki ze jak jest oncolisionenter to funckcja generate vibration i wtedy generuje sie jakis przedzial
+randomowo i w scriptable obj dac ze max vibration i tam dac ze od jakiegos do tego maxa obiektu
+i ta vibracja bedzie np trwac przez 10 sekund
+i tamm gdzie wibracja jest najwieksza w obrebie jakims ustalonym tam mmollinder sie skieruje najpierw
+
+jesli wibracja bedzie tam wieksza np niz 100 to mollinder zesprintuje do tego miejsca a takto bedzie szedl normalnie
+
+//
+moze dodac opcje podnoszenia nie oznaczonego przez id itema jesli tylko ma canpickup layer
+
+//jesli bede miec null exception error
+to wystarczy dac caly kod w if statement ze jesli np target != null 
+i wtedy bedzie SMIGAC!!!
